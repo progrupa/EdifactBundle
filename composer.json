@@ -1,0 +1,36 @@
+{
+  "name" : "progrupa/edifactbundle",
+  "description" : "An EDIFACT bundle",
+  "type" : "symfony-bundle",
+  "authors" : [{
+    "name" : "Dominik Kasprzak",
+    "email" : "dominik.kasprzak@progrupa.com"
+  }],
+  "keywords" : [
+    "edi edifact bundle"
+  ],
+  "license":      "proprietary",
+  "autoload": {
+    "psr-4": {
+      "Progrupa\\EdifactBundle\\": ""
+    }
+  },
+  "require" : {
+    "php": ">=5.4",
+    "sabas/edifact": "dev-master"
+  },
+  "autoload" : {
+    "psr-0" : {
+      "Company\\DemoBundle" : ""
+    }
+  },
+  "target-dir" : "Company/DemoBundle",
+  "repositories" : [{
+  }],
+  "extra" : {
+    "branch-alias" : {
+      "dev-master" : "some_version-dev"
+    }
+  }
+}
+
