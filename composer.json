@@ -13,7 +13,7 @@
     },
     "require" : {
         "php": ">=5.4",
-        "sabas/edifact": "@dev"
+        "sabas/edifact": "dev-master@dev"
     },
     "target-dir" : "Company/DemoBundle"
 }
