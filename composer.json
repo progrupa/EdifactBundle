@@ -13,6 +13,6 @@
     },
     "require" : {
         "php": ">=5.4",
-        "sabas/edifact": "dev-master@dev"
+        "progrupa/edifact": "dev-master@dev"
     }
 }
