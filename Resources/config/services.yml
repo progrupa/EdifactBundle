@@ -4,19 +4,19 @@ services:
 
     progrupa.edifact.reader:
         class: EDI\Reader
-        arguments: [@progrupa.edifact.parser, @progrupa.edifact.populator.interchange]
+        arguments: ["@progrupa.edifact.parser", "@progrupa.edifact.populator.interchange"]
 
     progrupa.edifact.encoder:
         class: EDI\Encoder
-        arguments: [@progrupa.edifact.printer.annotations, @progrupa.edifact.printer.segments, @progrupa.edifact.mapping_loader]
+        arguments: ["@progrupa.edifact.printer.annotations", "@progrupa.edifact.printer.segments", "@progrupa.edifact.mapping_loader"]
 
     progrupa.edifact.populator.interchange:
         class: EDI\Populate\InterchangePopulator
-        arguments: [@annotation_reader, @progrupa.edifact.populator.message]
+        arguments: ["@annotation_reader", "@progrupa.edifact.populator.message"]
 
     progrupa.edifact.populator.message:
         class: EDI\Populate\MessagePopulator
-        arguments: [@annotation_reader, @progrupa.edifact.populator.segment, @progrupa.edifact.mapping_loader]
+        arguments: ["@annotation_reader", "@progrupa.edifact.populator.segment", "@progrupa.edifact.mapping_loader"]
 
     progrupa.edifact.populator.segment:
         class: EDI\Populate\SegmentPopulator
@@ -27,7 +27,7 @@ services:
 
     progrupa.edifact.printer.annotations:
         class: EDI\Printer\AnnotationPrinter
-        arguments: [@annotation_reader]
+        arguments: ["@annotation_reader"]
 
     progrupa.edifact.printer.segments:
         class: EDI\Printer\SegmentPrinter
