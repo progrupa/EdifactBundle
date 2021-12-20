@@ -23,7 +23,7 @@ services:
 
     progrupa.edifact.mapping_loader:
         class: EDI\Mapping\MappingLoader
-        arguments: [%progrupa.edifact.mapping%]
+        arguments: ["%progrupa.edifact.mapping%"]
 
     progrupa.edifact.printer.annotations:
         class: EDI\Printer\AnnotationPrinter
