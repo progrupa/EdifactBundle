@@ -13,8 +13,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('progrupa_edifact')
+        $treeBuilder = new TreeBuilder('progrupa_edifact');
+        $rootNode = $treeBuilder->getRootNode()
             ->children()
                 ->scalarNode('mapping')->end()
             ->end();
